@@ -1,0 +1,46 @@
+{% extends 'heroverse/layout.html' %}
+
+{% block content %}
+
+<body class="login-page">
+    <div class="twitter-login-box">
+        <header>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/444903e3-91cb-4e2c-a001-aef2e9d99790/daj7nti-d6776829-738d-49ab-bf2d-ec3aa51d45c8.png/v1/fill/w_1024,h_768/dota_2_logo_by_flashstep111_daj7nti-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6IlwvZlwvNDQ0OTAzZTMtOTFjYi00ZTJjLWEwMDEtYWVmMmU5ZDk5NzkwXC9kYWo3bnRpLWQ2Nzc2ODI5LTczOGQtNDlhYi1iZjJkLWVjM2FhNTFkNDVjOC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.GMI_HLKLMkeQZgiH6IgtBu9d7v9YAqlhdjrRp5eJYKM"
+                alt="dota logo">
+            <h1>Registrate en Heroverse</h1>
+        </header>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-wrapper">
+                <label for="user-name-id">First Name</label>
+                {{ form.first_name }}
+            </div>
+            <div class="input-wrapper">
+                <label for="user-name-id">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="input-wrapper">
+                <label for="user-name-id">Email</label>
+                {{ form.email }}
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password-id">Password</label>
+                {{ form.password1 }}
+            </div>
+            <div class="input-wrapper">
+                <label for="password-id">Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+
+            <button class="twitter-btn">Registrarse</button>
+        </form>
+
+        <div class="footer">
+            <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+        </div>
+
+    </div>
+
+    {% endblock content %}
